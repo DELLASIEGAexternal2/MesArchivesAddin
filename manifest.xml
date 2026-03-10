@@ -4,7 +4,7 @@
   <Version>1.0.0.1</Version>
   <ProviderName>Mes_Archives_Banque_de_France</ProviderName>
   <DefaultLocale>en-US</DefaultLocale>
-  <DisplayName DefaultValue="MesArchivesAddin"/>
+  <DisplayName DefaultValue="Mes Archives"/>
   <Description DefaultValue="Archives et Restaurer vos Mail Outlook"/>
   <IconUrl DefaultValue="https://dellasiegaexternal2.github.io/MesArchivesAddin/assets/icon-64.png"/>
   <HighResolutionIconUrl DefaultValue="https://dellasiegaexternal2.github.io/MesArchivesAddin/assets/icon-128.png"/>
