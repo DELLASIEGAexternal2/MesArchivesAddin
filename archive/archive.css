@@ -1,1 +1,29 @@
+body{
 
+font-family:Segoe UI;
+
+background:#f4f4f4;
+
+padding:20px;
+
+}
+
+h2{
+
+margin-bottom:20px;
+
+}
+
+.mail{
+
+background:white;
+
+padding:12px;
+
+margin-bottom:10px;
+
+border-radius:5px;
+
+box-shadow:0 2px 5px rgba(0,0,0,0.1);
+
+}
