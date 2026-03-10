@@ -12,7 +12,7 @@ alert("Ouverture archives " + year);
 
 function modop(){
 
-window.open("https://intranet/modop");
+window.open("https://dellasiegaexternal2.github.io/MesArchivesAddin/ModOp_Mes_ARCHIVES.pdf");
 
 }
 
