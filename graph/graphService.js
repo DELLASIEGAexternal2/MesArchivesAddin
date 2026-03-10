@@ -1,22 +1,25 @@
+export async function getMessagesByYear(year){
 
-async function getUser(){
+  const token = await OfficeRuntime.auth.getAccessToken();
 
-const token = await OfficeRuntime.auth.getAccessToken();
+  const start = `${year}-01-01T00:00:00Z`;
+  const end = `${year}-12-31T23:59:59Z`;
 
-const response = await fetch(
+  const url =
+  "https://graph.microsoft.com/v1.0/me/messages?$filter=receivedDateTime ge " +
+  start +
+  " and receivedDateTime le " +
+  end +
+  "&$top=20";
 
-"https://graph.microsoft.com/v1.0/me",
+  const response = await fetch(url,{
+    headers:{
+      Authorization:"Bearer " + token
+    }
+  });
 
-{
+  const data = await response.json();
 
-headers:{
-
-"Authorization":"Bearer " + token
-
-}
-
-});
-
-return await response.json();
+  return data.value;
 
 }
