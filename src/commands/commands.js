@@ -1,35 +1,66 @@
-/*
- * Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license.
- * See LICENSE in the project root for license information.
- */
-
 /* global Office */
 
-Office.onReady(() => {
-  // If needed, Office.js is ready to be called.
-});
+Office.onReady(() => {});
 
-/**
- * Shows a notification when the add-in command is executed.
- * @param event {Office.AddinCommands.Event}
- */
-function action(event) {
-  const message = {
-    type: Office.MailboxEnums.ItemNotificationMessageType.InformationalMessage,
-    message: "Performed action.",
-    icon: "Icon.80x80",
-    persistent: true,
-  };
+/* fonction générique popup */
+function openDialog(url) {
 
-  // Show a notification message.
-  Office.context.mailbox.item.notificationMessages.replaceAsync(
-    "ActionPerformanceNotification",
-    message
+  Office.context.ui.displayDialogAsync(
+    url,
+    { height: 60, width: 40 },
+    function (result) {
+      if (result.status !== Office.AsyncResultStatus.Succeeded) {
+        console.error(result.error.message);
+      }
+    }
   );
 
-  // Be sure to indicate when the add-in command function is complete.
-  event.completed();
 }
 
-// Register the function with Office.
-Office.actions.associate("action", action);
+/* boutons années */
+
+export function openArchive2021(event) {
+
+  openDialog("https://dellasiegaexternal2.github.io/MesArchivesAddin/archive/archive.html?year=2021");
+  event.completed();
+
+}
+
+export function openArchive2022(event) {
+
+  openDialog("https://dellasiegaexternal2.github.io/MesArchivesAddin/archive/archive.html?year=2022");
+  event.completed();
+
+}
+
+export function openArchive2023(event) {
+
+  openDialog("https://dellasiegaexternal2.github.io/MesArchivesAddin/archive/archive.html?year=2023");
+  event.completed();
+
+}
+
+export function openArchive2024(event) {
+
+  openDialog("https://dellasiegaexternal2.github.io/MesArchivesAddin/archive/archive.html?year=2024");
+  event.completed();
+
+}
+
+/* bouton mode opératoire */
+
+export function openModop(event) {
+
+  openDialog("https://dellasiegaexternal2.github.io/MesArchivesAddin/ModOp_Mes_ARCHIVES.pdf");
+  event.completed();
+
+}
+
+/* bouton à propos */
+
+export function openAbout(event) {
+
+  openDialog("https://dellasiegaexternal2.github.io/MesArchivesAddin/popup/about.html");
+  event.completed();
+
+}
