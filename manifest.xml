@@ -113,6 +113,10 @@ xsi:type="VersionOverridesV1_0">
 <Host xsi:type="MailHost">
 
 <DesktopFormFactor>
+<!--
+Début
+-->
+
 
 <FunctionFile resid="Commands.Url"/>
 
@@ -123,42 +127,19 @@ xsi:type="VersionOverridesV1_0">
 </GetStarted>
 
 <ExtensionPoint xsi:type="MessageReadCommandSurface">
-  
-
-<!--
-FICHIER JAVASCRIPT CONTENANT LES ACTIONS DES BOUTONS
--->
-<FunctionFile resid="Commands.Url"/>
-
-<!--
-EXTENSION DU RUBAN OUTLOOK
--->
-<ExtensionPoint xsi:type="MessageReadCommandSurface">
 
 <OfficeTab id="TabDefault">
 
-<!--
-GROUPE DE BOUTONS
--->
 <Group id="MesArchivesGroup">
 
-<!--
-NOM DU GROUPE DANS LE RUBAN
--->
 <Label resid="GroupLabel"/>
 
-<!--
-ICÔNES UTILISÉES PAR LES BOUTONS
--->
 <Icon>
 <bt:Image size="16" resid="Icon.16x16"/>
 <bt:Image size="32" resid="Icon.32x32"/>
 <bt:Image size="80" resid="Icon.80x80"/>
 </Icon>
 
-<!--
-BOUTON ARCHIVE 2021
--->
 <Control xsi:type="Button" id="Archive2021">
 <Label resid="Archive2021.Label"/>
 <Action xsi:type="ExecuteFunction">
@@ -166,9 +147,6 @@ BOUTON ARCHIVE 2021
 </Action>
 </Control>
 
-<!--
-BOUTON ARCHIVE 2022
--->
 <Control xsi:type="Button" id="Archive2022">
 <Label resid="Archive2022.Label"/>
 <Action xsi:type="ExecuteFunction">
@@ -176,9 +154,6 @@ BOUTON ARCHIVE 2022
 </Action>
 </Control>
 
-<!--
-BOUTON ARCHIVE 2023
--->
 <Control xsi:type="Button" id="Archive2023">
 <Label resid="Archive2023.Label"/>
 <Action xsi:type="ExecuteFunction">
@@ -186,9 +161,6 @@ BOUTON ARCHIVE 2023
 </Action>
 </Control>
 
-<!--
-BOUTON ARCHIVE 2024
--->
 <Control xsi:type="Button" id="Archive2024">
 <Label resid="Archive2024.Label"/>
 <Action xsi:type="ExecuteFunction">
@@ -196,9 +168,6 @@ BOUTON ARCHIVE 2024
 </Action>
 </Control>
 
-<!--
-OUVERTURE DU MODE OPÉRATOIRE
--->
 <Control xsi:type="Button" id="Modop">
 <Label resid="Modop.Label"/>
 <Action xsi:type="ExecuteFunction">
@@ -206,9 +175,6 @@ OUVERTURE DU MODE OPÉRATOIRE
 </Action>
 </Control>
 
-<!--
-FENÊTRE A PROPOS
--->
 <Control xsi:type="Button" id="About">
 <Label resid="About.Label"/>
 <Action xsi:type="ExecuteFunction">
@@ -221,8 +187,12 @@ FENÊTRE A PROPOS
 </OfficeTab>
 
 </ExtensionPoint>
+  
+<!--
+FIN
+-->
 
-</DesktopFormFactor>
+  
 
 </Host>
 
