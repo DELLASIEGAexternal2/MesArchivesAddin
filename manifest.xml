@@ -114,6 +114,17 @@ xsi:type="VersionOverridesV1_0">
 
 <DesktopFormFactor>
 
+<FunctionFile resid="Commands.Url"/>
+
+<GetStarted>
+<Title resid="GroupLabel"/>
+<Description resid="GroupLabel"/>
+<LearnMoreUrl resid="Taskpane.Url"/>
+</GetStarted>
+
+<ExtensionPoint xsi:type="MessageReadCommandSurface">
+  
+
 <!--
 FICHIER JAVASCRIPT CONTENANT LES ACTIONS DES BOUTONS
 -->
@@ -237,6 +248,9 @@ DefaultValue="https://dellasiegaexternal2.github.io/MesArchivesAddin/assets/icon
 
 <bt:Urls>
 
+<bt:Url id="Taskpane.Url"
+DefaultValue="https://dellasiegaexternal2.github.io/MesArchivesAddin/src/taskpane/taskpane.html"/>
+  
 <!--
 FICHIER JAVASCRIPT DES ACTIONS
 -->
