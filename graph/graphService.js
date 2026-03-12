@@ -1,25 +1,45 @@
+/*
+Service qui interroge Microsoft Graph
+pour récupérer les emails Outlook
+*/
+
 export async function getMessagesByYear(year){
 
-  const token = await OfficeRuntime.auth.getAccessToken();
+/*
+Obtention d'un token OAuth
+via le mécanisme SSO Outlook
+*/
 
-  const start = `${year}-01-01T00:00:00Z`;
-  const end = `${year}-12-31T23:59:59Z`;
+const token = await OfficeRuntime.auth.getAccessToken({
+allowSignInPrompt:true,
+allowConsentPrompt:true
+});
 
-  const url =
-  "https://graph.microsoft.com/v1.0/me/messages?$filter=receivedDateTime ge " +
-  start +
-  " and receivedDateTime le " +
-  end +
-  "&$top=20";
+/*
+Construction des dates de filtre
+*/
 
-  const response = await fetch(url,{
-    headers:{
-      Authorization:"Bearer " + token
-    }
-  });
+const start=`${year}-01-01T00:00:00Z`;
+const end=`${year}-12-31T23:59:59Z`;
 
-  const data = await response.json();
+/*
+Requête Graph filtrée par date
+*/
 
-  return data.value;
+const url=`https://graph.microsoft.com/v1.0/me/messages?$filter=receivedDateTime ge ${start} and receivedDateTime le ${end}&$top=20`;
+
+const response = await fetch(url,{
+headers:{
+Authorization:`Bearer ${token}`
+}
+});
+
+const data = await response.json();
+
+/*
+Retourne la liste des mails
+*/
+
+return data.value;
 
 }
