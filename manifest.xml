@@ -27,7 +27,7 @@ Doit rester stable dans le temps.
 VERSION DE L'ADD-IN
 Permet à Outlook de savoir si une mise à jour est disponible
 -->
-<Version>1.0.0.2</Version>
+<Version>1.0.0.3</Version>
 
 <!--
 FOURNISSEUR DE L'APPLICATION
