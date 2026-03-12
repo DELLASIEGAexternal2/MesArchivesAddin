@@ -1,34 +1,47 @@
-Office.onReady(() => {
+/*
+Ce script affiche les emails
+dans la popup archive.html
+*/
 
-  const params = new URLSearchParams(window.location.search);
-  const year = params.get("year");
+import {getMessagesByYear} from "../graph/graphService.js";
 
-  document.getElementById("title").innerText = "Archives " + year;
+async function loadArchive(){
 
-  loadMessages(year);
+/*
+Récupère l'année passée
+dans l'URL
+*/
+
+const params=new URLSearchParams(window.location.search);
+
+const year=params.get("year");
+
+/*
+Appel Microsoft Graph
+*/
+
+const mails=await getMessagesByYear(year);
+
+/*
+Affichage des mails
+*/
+
+const container=document.getElementById("messages");
+
+mails.forEach(mail=>{
+
+const div=document.createElement("div");
+
+div.innerHTML=`<b>${mail.subject}</b><br>${mail.receivedDateTime}`;
+
+container.appendChild(div);
 
 });
 
-async function loadMessages(year){
-
-  const messages = await getMessagesByYear(year);
-
-  const container = document.getElementById("messages");
-
-  messages.forEach(m => {
-
-    const div = document.createElement("div");
-
-    div.className="mail";
-
-    div.innerHTML = `
-      <b>${m.subject}</b><br>
-      ${m.from.emailAddress.address}<br>
-      ${m.receivedDateTime}
-    `;
-
-    container.appendChild(div);
-
-  });
-
 }
+
+/*
+Initialisation Office
+*/
+
+Office.onReady(loadArchive);
