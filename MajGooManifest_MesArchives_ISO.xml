@@ -4,7 +4,7 @@
            xmlns:bt="http://schemas.microsoft.com/office/officeappbasictypes/1.0"
            xsi:type="MailApp">
 
-  <Id>2b3b30f2-8c56-4028-9090-0198c5154a40</Id>
+  <Id>f3d1556d-caa1-4f74-9930-7c9414e55f38</Id>
   <Version>1.0.0.3</Version>
   <ProviderName>Mes Archives Banque de France</ProviderName>
   <DefaultLocale>en-US</DefaultLocale>
