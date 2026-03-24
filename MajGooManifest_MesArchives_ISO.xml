@@ -6,7 +6,7 @@
 
   <Id>f3d1556d-caa1-4f74-9930-7c9414e55f38</Id>
   <Version>1.0.0.3</Version>
-  <ProviderName>Mes Archives Banque de France</ProviderName>
+  <ProviderName>Mes Archives Banque de France POC Bêta</ProviderName>
   <DefaultLocale>en-US</DefaultLocale>
 
   <DisplayName DefaultValue="MesArchivesAddin"/>
