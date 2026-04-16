@@ -188,7 +188,7 @@
       </bt:Urls>
 
       <bt:ShortStrings>
-        <bt:String id="GroupLabel" DefaultValue="Mes Archives BdF"/>
+        <bt:String id="GroupLabel" DefaultValue="Mes Archives BdF_POC"/>
         <bt:String id="archive2021Label" DefaultValue="Archives 2021"/>
         <bt:String id="archive2022Label" DefaultValue="Archives 2022"/>
         <bt:String id="archive2023Label" DefaultValue="Archives 2023"/>
