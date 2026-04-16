@@ -9,7 +9,7 @@
   <ProviderName>Mes Archives Banque de France POC Bêta</ProviderName>
   <DefaultLocale>en-US</DefaultLocale>
 
-  <DisplayName DefaultValue="MesArchivesAddin"/>
+  <DisplayName DefaultValue="POC_MesArchivesAddin"/>
   <Description DefaultValue="Archives et restauration des mails Outlook"/>
 
   <IconUrl DefaultValue="https://dellasiegaexternal2.github.io/MesArchivesAddin/assets/icon-64.png"/>
