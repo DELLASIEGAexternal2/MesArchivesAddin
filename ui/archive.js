@@ -1,59 +1,39 @@
-const STATUS = {
-  NOT_ARCHIVED: "NOT_ARCHIVED",
-  ARCHIVED_NOT_MOUNTED: "ARCHIVED_NOT_MOUNTED",
-  ARCHIVED_MOUNTED: "ARCHIVED_MOUNTED"
-};
+const archives = [
+  { year: 2024, status: "INSTALLED" },
+  { year: 2023, status: "AVAILABLE" },
+  { year: 2022, status: "CANCELLED" },
+  { year: 2021, status: "UNAVAILABLE" }
+];
 
-Office.onReady(() => {
-  loadArchives();
-});
-
-function getYears() {
-  const y = new Date().getFullYear();
-  return [y, y-1, y-2, y-3];
-}
-
-function getStatusColor(status) {
+function getStatusClass(status) {
   switch (status) {
-    case STATUS.ARCHIVED_MOUNTED: return "green";
-    case STATUS.ARCHIVED_NOT_MOUNTED: return "orange";
-    default: return "red";
+    case "INSTALLED": return "status-installed";
+    case "AVAILABLE": return "status-available";
+    case "CANCELLED": return "status-cancelled";
+    case "UNAVAILABLE": return "status-unavailable";
+    case "PROCESSING": return "status-processing";
+    default: return "";
   }
 }
 
-function loadArchives() {
+function createRow(item) {
+  const div = document.createElement("div");
+  div.className = `archive-row ${getStatusClass(item.status)}`;
 
-  const years = getYears();
+  div.innerHTML = `
+    <object type="image/svg+xml" data="components/archive-icon.svg" class="archive-icon"></object>
+    <span class="archive-label">${item.year} - ${item.status}</span>
+  `;
 
-  const data = years.map(y => ({
-    year: y,
-    status: STATUS.NOT_ARCHIVED
-  }));
-
-  render(data);
+  return div;
 }
 
-function render(list) {
+function render() {
+  const container = document.getElementById("archiveList");
 
-  const div = document.getElementById("archives");
-  div.innerHTML = "";
-
-  list.forEach(a => {
-
-    const color = getStatusColor(a.status);
-
-    div.innerHTML += `
-      <div class="item">
-        ${a.year} <span style="color:${color}">●</span>
-        <button onclick="archive(${a.year})">Archiver</button>
-      </div>
-    `;
+  archives.forEach(a => {
+    container.appendChild(createRow(a));
   });
 }
 
-async function archive(year) {
-
-  alert("Archivage année " + year);
-
-  // futur : appel Graph
-}
+document.addEventListener("DOMContentLoaded", render);
