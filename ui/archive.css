@@ -1,10 +1,45 @@
 body {
-  font-family: Segoe UI;
+  font-family: "Segoe UI", sans-serif;
+  font-size: 12px;
+  margin: 0;
+  background: #f4f6f9;
+}
+
+/* LISTE */
+.archive-list {
   padding: 10px;
 }
 
-.item {
-  margin: 10px 0;
+/* LIGNE */
+.archive-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
   padding: 8px;
-  border: 1px solid #ccc;
+  border-bottom: 1px solid #dcdcdc;
+  background: #fff;
 }
+
+/* HOVER style Outlook */
+.archive-row:hover {
+  background: #eaf2fb;
+  cursor: pointer;
+}
+
+/* ICON */
+.archive-icon {
+  width: 22px;
+  height: 22px;
+}
+
+/* LABEL */
+.archive-label {
+  font-size: 12px;
+}
+
+/* COULEURS STATUT */
+.status-available .status-color { fill: #f1c40f; }
+.status-installed .status-color { fill: #2ecc71; }
+.status-cancelled .status-color { fill: #e74c3c; }
+.status-unavailable .status-color { fill: #7f8c8d; }
+.status-processing .status-color { fill: #f39c12; }
