@@ -1,29 +1,34 @@
-body{
-
-font-family:Segoe UI;
-
-background:#f4f4f4;
-
-padding:20px;
-
+body {
+  font-family: Segoe UI;
+  font-size: 12px;
+  background: #f4f6f9;
+  margin: 0;
 }
 
-h2{
-
-margin-bottom:20px;
-
+.container {
+  padding: 10px;
 }
 
-.mail{
-
-background:white;
-
-padding:12px;
-
-margin-bottom:10px;
-
-border-radius:5px;
-
-box-shadow:0 2px 5px rgba(0,0,0,0.1);
-
+.archive-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px;
+  background: #fff;
+  border-bottom: 1px solid #ddd;
 }
+
+.archive-row:hover {
+  background: #eaf2fb;
+}
+
+.icon {
+  width: 22px;
+  height: 22px;
+}
+
+/* STATUS COLORS */
+.status-green { fill: #2ecc71; }
+.status-yellow { fill: #f1c40f; }
+.status-red { fill: #e74c3c; }
+.status-gray { fill: #7f8c8d; }
