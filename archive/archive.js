@@ -1,47 +1,41 @@
-/*
-Ce script affiche les emails
-dans la popup archive.html
-*/
+const archives = [
+  { year: 2024, status: "INSTALLED" },
+  { year: 2023, status: "AVAILABLE" },
+  { year: 2022, status: "CANCELLED" },
+  { year: 2021, status: "UNAVAILABLE" }
+];
 
-import {getMessagesByYear} from "../graph/graphService.js";
-
-async function loadArchive(){
-
-/*
-Récupère l'année passée
-dans l'URL
-*/
-
-const params=new URLSearchParams(window.location.search);
-
-const year=params.get("year");
-
-/*
-Appel Microsoft Graph
-*/
-
-const mails=await getMessagesByYear(year);
-
-/*
-Affichage des mails
-*/
-
-const container=document.getElementById("messages");
-
-mails.forEach(mail=>{
-
-const div=document.createElement("div");
-
-div.innerHTML=`<b>${mail.subject}</b><br>${mail.receivedDateTime}`;
-
-container.appendChild(div);
-
-});
-
+function getColor(status) {
+  switch (status) {
+    case "INSTALLED": return "status-green";
+    case "AVAILABLE": return "status-yellow";
+    case "CANCELLED": return "status-red";
+    case "UNAVAILABLE": return "status-gray";
+    default: return "";
+  }
 }
 
-/*
-Initialisation Office
-*/
+function render() {
+  const container = document.getElementById("archiveList");
 
-Office.onReady(loadArchive);
+  archives.forEach(a => {
+
+    const row = document.createElement("div");
+    row.className = "archive-row";
+
+    row.innerHTML = `
+      <svg class="icon" viewBox="0 0 64 64">
+        <ellipse cx="32" cy="16" rx="18" ry="6" fill="#222"/>
+        <rect x="14" y="16" width="36" height="22" fill="#222"/>
+        <ellipse cx="32" cy="38" rx="18" ry="6" fill="#222"/>
+        <circle cx="48" cy="48" r="8" class="${getColor(a.status)}"/>
+      </svg>
+
+      <span>${a.year} - ${a.status}</span>
+    `;
+
+    container.appendChild(row);
+  });
+}
+
+document.addEventListener("DOMContentLoaded", render);
