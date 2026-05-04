@@ -1,17 +1,17 @@
 const archives = [
-  { year: 2024, status: "INSTALLED" },
-  { year: 2023, status: "AVAILABLE" },
-  { year: 2022, status: "CANCELLED" },
-  { year: 2021, status: "UNAVAILABLE" }
+  { year: 2024, status: "Installé" },
+  { year: 2023, status: "Disponible" },
+  { year: 2022, status: "Annulé" },
+  { year: 2021, status: "Indisponible" }
 ];
 
 function getStatusClass(status) {
   switch (status) {
-    case "INSTALLED": return "status-installed";
-    case "AVAILABLE": return "status-available";
-    case "CANCELLED": return "status-cancelled";
-    case "UNAVAILABLE": return "status-unavailable";
-    case "PROCESSING": return "status-processing";
+    case "Installé": return "status-installed";
+    case "Disponible": return "status-available";
+    case "Annulé": return "status-cancelled";
+    case "Indisponible": return "status-unavailable";
+    case "En cours": return "status-processing";
     default: return "";
   }
 }
