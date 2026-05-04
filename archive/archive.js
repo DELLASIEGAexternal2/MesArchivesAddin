@@ -1,40 +1,38 @@
 const archives = [
-  { year: 2024, status: "INSTALLED" },
-  { year: 2023, status: "AVAILABLE" },
-  { year: 2022, status: "CANCELLED" },
-  { year: 2021, status: "UNAVAILABLE" }
+  { year: 2024, status: "Installé" },
+  { year: 2023, status: "Disponible" },
+  { year: 2022, status: "Annulé" },
+  { year: 2021, status: "Indisponible" }
 ];
 
-function getColor(status) {
+function getStatusClass(status) {
   switch (status) {
-    case "INSTALLED": return "status-green";
-    case "AVAILABLE": return "status-yellow";
-    case "CANCELLED": return "status-red";
-    case "UNAVAILABLE": return "status-gray";
+    case "Installé": return "status-installed";
+    case "Disponible": return "status-available";
+    case "Annulé": return "status-cancelled";
+    case "Indisponible": return "status-unavailable";
+    case "En cours": return "status-processing";
     default: return "";
   }
+}
+
+function createRow(item) {
+  const div = document.createElement("div");
+  div.className = `archive-row ${getStatusClass(item.status)}`;
+
+  div.innerHTML = `
+    <object type="image/svg+xml" data="../assets/archive-icons-svg/archive-icon.svg" class="archive-icon"></object>
+    <span class="archive-label">${item.year} - ${item.status}</span>
+  `;
+
+  return div;
 }
 
 function render() {
   const container = document.getElementById("archiveList");
 
   archives.forEach(a => {
-
-    const row = document.createElement("div");
-    row.className = "archive-row";
-
-    row.innerHTML = `
-      <svg class="icon" viewBox="0 0 64 64">
-        <ellipse cx="32" cy="16" rx="18" ry="6" fill="#222"/>
-        <rect x="14" y="16" width="36" height="22" fill="#222"/>
-        <ellipse cx="32" cy="38" rx="18" ry="6" fill="#222"/>
-        <circle cx="48" cy="48" r="8" class="${getColor(a.status)}"/>
-      </svg>
-
-      <span>${a.year} - ${a.status}</span>
-    `;
-
-    container.appendChild(row);
+    container.appendChild(createRow(a));
   });
 }
 
