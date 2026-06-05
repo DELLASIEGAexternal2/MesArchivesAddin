@@ -17,6 +17,7 @@
   <SupportUrl DefaultValue="https://dellasiegaexternal2.github.io/MesArchivesAddin/ModOp_Mes_ARCHIVES.pdf"/>
 
   <AppDomains>
+           <AppDomain>https://localhost:5002</AppDomain>
     <AppDomain>https://dellasiegaexternal2.github.io</AppDomain>
   </AppDomains>
 
