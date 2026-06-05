@@ -1,43 +1,13 @@
-<!DOCTYPE html>
 
-<html>
-
-<head>
-
-<meta charset="UTF-8">
-
-<link rel="stylesheet" href="taskpane.css">
-
-<script src="https://appsforoffice.microsoft.com/lib/1/hosted/office.js"></script>
-
-</head>
-
-<body>
-
-<h1>Mes Archives</h1>
-
-<div class="archives">
-
-<button onclick="openArchive('2021')">2021</button> 
-
-<button onclick="openArchive('2022')">2022</button>
-
-<button onclick="openArchive('2023')">2023</button>
-
-<button onclick="openArchive('2024')">2024</button>
-
-</div>
-
-<div class="actions">
-
-<button onclick="modop()">Mode opératoire</button>
-
-<button onclick="about()">À propos</button>
-
-</div>
-
-<script src="taskpane.js"></script>
-
-</body>
-
-</html>
+<button id="btn-archive-2021" class="archive-btn" onclick="restoreArchiveLocal(2021)">
+    <span class="icon"></span> Archives 2021
+</button>
+<button id="btn-archive-2022" class="archive-btn" onclick="restoreArchiveLocal(2022)">
+    <span class="icon"></span> Archives 2022
+</button>
+<button id="btn-archive-2023" class="archive-btn" onclick="restoreArchiveLocal(2023)">
+    <span class="icon"></span> Archives 2023
+</button>
+<button id="btn-archive-2024" class="archive-btn" onclick="restoreArchiveLocal(2024)">
+    <span class="icon"></span> Archives 2024
+</button>
