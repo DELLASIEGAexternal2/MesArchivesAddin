@@ -70,21 +70,23 @@
               <Group id="MesArchivesGroup">
                 <Label resid="GroupLabel"/>
 
-                <Control xsi:type="Button" id="archive2021">
-                  <Label resid="archive2021Label"/>
-                  <Supertip>
-                    <Title resid="archive2021Label"/>
-                    <Description resid="archive2021Desc"/>
-                  </Supertip>
-                  <Icon>
-                    <bt:Image size="16" resid="Icon.16x16"/>
-                    <bt:Image size="32" resid="Icon.32x32"/>
-                    <bt:Image size="80" resid="Icon.80x80"/>
-                  </Icon>
-                  <Action xsi:type="ExecuteFunction">
-                    <FunctionName>openArchive2021</FunctionName>
-                  </Action>
-                </Control>
+<Control xsi:type="Button" id="archive2021">
+<Label resid="archive2021Label" />
+<Supertip>
+<Title resid="archive2021Label" />
+<Description resid="archive2021Desc" />
+</Supertip>
+<Icon>
+<bt:Image size="16" resid="Icon.16x16" />
+<bt:Image size="32" resid="Icon.32x32" />
+<bt:Image size="80" resid="Icon.80x80" />
+</Icon>
+<Action xsi:type="ExecuteFunction">
+<FunctionName>openArchive2021</FunctionName>
+</Action>
+<Enabled>true</Enabled>
+<GetImage resid="Icon.32x32" />
+</Control>
 
                 <Control xsi:type="Button" id="archive2022">
                   <Label resid="archive2022Label"/>
