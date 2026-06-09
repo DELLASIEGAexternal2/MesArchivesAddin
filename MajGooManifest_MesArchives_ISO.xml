@@ -6,11 +6,11 @@
 
   <Id>f3d1556d-caa1-4f74-9930-7c9414e55f38</Id>
   <Version>1.0.0.6</Version>
-  <ProviderName>Mes Archives Banque de France POC Bêta</ProviderName>
+  <ProviderName>PROD_PRESQUE_ArchivesAddin Banque de France</ProviderName>
   <DefaultLocale>en-US</DefaultLocale>
 
-  <DisplayName DefaultValue="POC_MesArchivesAddin"/>
-  <Description DefaultValue="Archives et restauration des mails Outlook"/>
+  <DisplayName DefaultValue="PROD_PRESQUE_ArchivesAddin"/>
+  <Description DefaultValue="PROD_PRESQUE_ArchivesAddin"/>
 
   <IconUrl DefaultValue="https://dellasiegaexternal2.github.io/MesArchivesAddin/assets/icon-64.png"/>
   <HighResolutionIconUrl DefaultValue="https://dellasiegaexternal2.github.io/MesArchivesAddin/assets/icon-128.png"/>
