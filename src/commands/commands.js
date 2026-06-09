@@ -52,3 +52,33 @@ if (typeof Office !== 'undefined') {
   Office.actions.associate("openModop", openModop);
   Office.actions.associate("openAbout", openAbout);
 }
+
+// Icône dynamique : jaune = dispo, vert = montée, rouge = erreur
+async function getArchiveIcon(year) {
+  try {
+    const res = await fetch('https://localhost:5002/status');
+    const status = await res.json();
+    const state = status[year]; // "null" | "montee" | "erreur"
+
+    const baseUrl = "https://dellasiegaexternal2.github.io/MesArchivesAddin/assets/archive-icons-svg/";
+    if (state === "montee") return baseUrl + "archive--installed.svg"; // vert
+    if (state === "erreur") return baseUrl + "archive--cancelled.svg"; // rouge
+    return baseUrl + "archive--available.svg"; // jaune par défaut
+  } catch (e) {
+    return "https://dellasiegaexternal2.github.io/MesArchivesAddin/assets/icon-32.png"; // gris si agent down
+  }
+}
+
+// Outlook appelle ça pour chaque bouton
+function getIcon2021() { return getArchiveIcon(2021); }
+function getIcon2022() { return getArchiveIcon(2022); }
+function getIcon2023() { return getArchiveIcon(2023); }
+function getIcon2024() { return getArchiveIcon(2024); }
+
+// Déclare à Office
+if (typeof Office!== 'undefined') {
+  Office.actions.associate("getIcon2021", getIcon2021);
+  Office.actions.associate("getIcon2022", getIcon2022);
+  Office.actions.associate("getIcon2023", getIcon2023);
+  Office.actions.associate("getIcon2024", getIcon2024);
+}
