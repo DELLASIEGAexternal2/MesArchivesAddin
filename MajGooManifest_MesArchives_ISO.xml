@@ -85,56 +85,66 @@
 <FunctionName>openArchive2021</FunctionName>
 </Action>
 <Enabled>true</Enabled>
-<GetImage resid="Icon.32x32" />
+<GetImage>
+<FunctionName>getIcon2021</FunctionName>
 </Control>
 
-                <Control xsi:type="Button" id="archive2022">
-                  <Label resid="archive2022Label"/>
-                  <Supertip>
-                    <Title resid="archive2022Label"/>
-                    <Description resid="archive2022Desc"/>
-                  </Supertip>
-                  <Icon>
-                    <bt:Image size="16" resid="Icon.16x16"/>
-                    <bt:Image size="32" resid="Icon.32x32"/>
-                    <bt:Image size="80" resid="Icon.80x80"/>
-                  </Icon>
-                  <Action xsi:type="ExecuteFunction">
-                    <FunctionName>openArchive2022</FunctionName>
-                  </Action>
-                </Control>
+            <Control xsi:type="Button" id="archive2022">
+<Label resid="archive2022Label" />
+<Supertip>
+<Title resid="archive2022Label" />
+<Description resid="archive2022Desc" />
+</Supertip>
+<Icon>
+<bt:Image size="16" resid="Icon.16x16" />
+<bt:Image size="32" resid="Icon.32x32" />
+<bt:Image size="80" resid="Icon.80x80" />
+</Icon>
+<Action xsi:type="ExecuteFunction">
+<FunctionName>openArchive2022</FunctionName>
+</Action>
+<Enabled>true</Enabled>
+<GetImage>
+<FunctionName>getIcon2022</FunctionName>
+</Control>
 
                 <Control xsi:type="Button" id="archive2023">
-                  <Label resid="archive2023Label"/>
-                  <Supertip>
-                    <Title resid="archive2023Label"/>
-                    <Description resid="archive2023Desc"/>
-                  </Supertip>
-                  <Icon>
-                    <bt:Image size="16" resid="Icon.16x16"/>
-                    <bt:Image size="32" resid="Icon.32x32"/>
-                    <bt:Image size="80" resid="Icon.80x80"/>
-                  </Icon>
-                  <Action xsi:type="ExecuteFunction">
-                    <FunctionName>openArchive2023</FunctionName>
-                  </Action>
-                </Control>
+<Label resid="archive2023Label" />
+<Supertip>
+<Title resid="archive2023Label" />
+<Description resid="archive2023Desc" />
+</Supertip>
+<Icon>
+<bt:Image size="16" resid="Icon.16x16" />
+<bt:Image size="32" resid="Icon.32x32" />
+<bt:Image size="80" resid="Icon.80x80" />
+</Icon>
+<Action xsi:type="ExecuteFunction">
+<FunctionName>openArchive2023</FunctionName>
+</Action>
+<Enabled>true</Enabled>
+<GetImage>
+<FunctionName>getIcon2023</FunctionName>
+</Control>
 
-                <Control xsi:type="Button" id="archive2024">
-                  <Label resid="archive2024Label"/>
-                  <Supertip>
-                    <Title resid="archive2024Label"/>
-                    <Description resid="archive2024Desc"/>
-                  </Supertip>
-                  <Icon>
-                    <bt:Image size="16" resid="Icon.16x16"/>
-                    <bt:Image size="32" resid="Icon.32x32"/>
-                    <bt:Image size="80" resid="Icon.80x80"/>
-                  </Icon>
-                  <Action xsi:type="ExecuteFunction">
-                    <FunctionName>openArchive2024</FunctionName>
-                  </Action>
-                </Control>
+  <Control xsi:type="Button" id="archive2022">
+<Label resid="archive2024Label" />
+<Supertip>
+<Title resid="archive2024Label" />
+<Description resid="archive2024Desc" />
+</Supertip>
+<Icon>
+<bt:Image size="16" resid="Icon.16x16" />
+<bt:Image size="32" resid="Icon.32x32" />
+<bt:Image size="80" resid="Icon.80x80" />
+</Icon>
+<Action xsi:type="ExecuteFunction">
+<FunctionName>openArchive2024</FunctionName>
+</Action>
+<Enabled>true</Enabled>
+<GetImage>
+<FunctionName>getIcon2024</FunctionName>
+</Control>
 
                 <Control xsi:type="Button" id="modop">
                   <Label resid="modopLabel"/>
@@ -191,7 +201,7 @@
       </bt:Urls>
 
       <bt:ShortStrings>
-        <bt:String id="GroupLabel" DefaultValue="Mes Archives BdF_POC"/>
+        <bt:String id="GroupLabel" DefaultValue="Mes ArchivesPresque Finies"/>
         <bt:String id="archive2021Label" DefaultValue="Archives 2021"/>
         <bt:String id="archive2022Label" DefaultValue="Archives 2022"/>
         <bt:String id="archive2023Label" DefaultValue="Archives 2023"/>
