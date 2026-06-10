@@ -176,7 +176,7 @@
                   </Icon>
                   <Action xsi:type="ShowTaskpane">
                     <TaskpaneId>TaskpaneId</TaskpaneId>
-                    <SourceLocation resid="Taskpane.url" />
+                    <SourceLocation resid="Taskpane.Url" />
                                       </Action>
                   </Control>
 
@@ -200,7 +200,7 @@
 
       <bt:Urls>
         <bt:Url id="Commands.Url" DefaultValue="https://dellasiegaexternal2.github.io/MesArchivesAddin/src/commands/commands.html"/>
-        <bt:Url id="Taskpane.url" DefaultValue="https://dellasiegaexternal2.github.io/MesArchivesAddin/src/taskpane/taskpane.html"/>
+        <bt:Url id="Taskpane.Url" DefaultValue="https://dellasiegaexternal2.github.io/MesArchivesAddin/src/taskpane/taskpane.html"/>
       </bt:Urls>
 
       <bt:ShortStrings>
