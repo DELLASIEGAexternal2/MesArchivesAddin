@@ -162,7 +162,8 @@
                   </Action>
                 </Control>
 
-                <Control xsi:type="Button" id="about">
+                         
+                 <Control xsi:type="Button" id="about">
                   <Label resid="aboutLabel"/>
                   <Supertip>
                     <Title resid="aboutLabel"/>
@@ -173,10 +174,11 @@
                     <bt:Image size="32" resid="Icon.32x32"/>
                     <bt:Image size="80" resid="Icon.80x80"/>
                   </Icon>
-                  <Action xsi:type="ExecuteFunction">
-                    <FunctionName>openAbout</FunctionName>
-                  </Action>
-                </Control>
+                  <Action xsi:type="ShowTaskpane">
+                    <TaskpaneId>TaskpaneId</TaskpaneId>
+                    <SourceLocation resid="Taskpane.url" />
+                                      </Action>
+                  </Control>
 
               </Group>
 
