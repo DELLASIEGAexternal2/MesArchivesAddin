@@ -82,3 +82,54 @@ if (typeof Office!== 'undefined') {
   Office.actions.associate("getIcon2023", getIcon2023);
   Office.actions.associate("getIcon2024", getIcon2024);
 }
+
+function restoreArchive2021(event){
+  restoreArchiveLocal("2021", event);
+}
+async function restoreArchiveLocal(year, event){
+  try{
+    Office.addin.showNotification("MesArchives",`Lancement restauration ${year}... `);
+//Récupère le token SSO de l'utilisateur Outlook
+    const accessToken = await Office.auth.getAccessToken({allowSignInPrompt: true});
+    //2. Appel le service.NET Local avec le Token
+    const response = await fetch(`https://localhost:5002/api/restore/${year}`,{
+      method: 'POST',
+      headers: {
+        'Authorization': `Bearer ${accessToken}`,
+        'Content-Type':'application/json'
+      }
+    });
+
+    if(!response.ok) throw new error(`HTTP ${response.status}`);
+
+    const result = await response.json();
+    Office.addinshowNotification("MesArchives", `${year} restauré : ${result.message}`);
+
+  }catch (error){
+    Office.addin.showNotification("Erreur", `Echec ${year} : ${result.message}`);
+  }finally{
+    event.completed();//Obligatoire sinon Outlook Freeze en Glitch
+  }
+}
+//Attention toujours mapper les fonct° pour chaque bouton
+Office.actions.associate("restoreArchive2021", restoreArchive2021);
+Office.actions.associate("restoreArchive2022", (e) => restoreArchiveLocal("2022", e));
+Office.actions.associate("restoreArchive2023", (e) => restoreArchiveLocal("2023", e));
+Office.actions.associate("restoreArchive2024", (e) => restoreArchivelocal("2024", e));
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
