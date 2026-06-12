@@ -201,6 +201,8 @@
       <bt:Urls>
         <bt:Url id="Commands.Url" DefaultValue="https://dellasiegaexternal2.github.io/MesArchivesAddin/src/commands/commands.html"/>
         <bt:Url id="Taskpane.Url" DefaultValue="https://dellasiegaexternal2.github.io/MesArchivesAddin/src/taskpane/taskpane.html"/>
+        <bt:String id="aboutLabel" DefaultValue="Etat des Archives" />
+        <bt:String id="aboutDesc" DefaultValue="Voir le détail du montage des PST"
       </bt:Urls>
 
       <bt:ShortStrings>
