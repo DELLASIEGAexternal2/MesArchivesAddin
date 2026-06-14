@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MesArchivesAgent")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+18d4aea5af112d4a9a65b15f849669d3c60d5f12")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f66af20360907d2a92f1acc956970f7215203bee")]
 [assembly: System.Reflection.AssemblyProductAttribute("MesArchivesAgent")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MesArchivesAgent")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
