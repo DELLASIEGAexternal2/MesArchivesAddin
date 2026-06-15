@@ -4,7 +4,7 @@
            xmlns:bt="http://schemas.microsoft.com/office/officeappbasictypes/1.0"
            xsi:type="MailApp">
   <Id>f3d1556d-caa1-4f74-9930-7c9414e55f38</Id>
-  <Version>1.0.0.7</Version>
+  <Version>1.0.0.8</Version>
   <ProviderName>PROD_PRESQUE_ArchivesAddin Banque de France</ProviderName>
   <DefaultLocale>en-US</DefaultLocale>
   <DisplayName DefaultValue="PROD_PRESQUE_ArchivesAddin"/>
