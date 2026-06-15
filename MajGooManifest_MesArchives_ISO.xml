@@ -13,7 +13,7 @@
   <HighResolutionIconUrl DefaultValue="https://dellasiegaexternal2.github.io/MesArchivesAddin/assets/icon-128.png"/>
   <SupportUrl DefaultValue="https://dellasiegaexternal2.github.io/MesArchivesAddin/ModOp_Mes_ARCHIVES.pdf"/>
   <AppDomains>
-    <AppDomain>https://localhost:5002</AppDomain>
+    
     <AppDomain>https://dellasiegaexternal2.github.io</AppDomain>
   </AppDomains>
   <Hosts><Host Name="Mailbox"/></Hosts>
