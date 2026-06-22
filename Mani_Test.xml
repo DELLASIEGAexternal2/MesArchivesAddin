@@ -42,7 +42,7 @@
   <Permissions>ReadWriteMailbox</Permissions>
 
   <!-- ✅ IMPORTANT -->
-  <Rule xsi:type="RuleCollection" Mode="Or" RuleCollectionType="Item">
+  <Rule xsi:type="RuleCollection" Mode="Or">
     <Rule xsi:type="ItemIs" ItemType="Message" FormType="Read"/>
   </Rule>
 
