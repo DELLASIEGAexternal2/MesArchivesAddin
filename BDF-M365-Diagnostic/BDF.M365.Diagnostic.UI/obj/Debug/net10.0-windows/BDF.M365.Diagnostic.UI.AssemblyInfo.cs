@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BDF.M365.Diagnostic.UI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c9eb6d89bfb103302a2c2b2a7e6fdd60388e2d01")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8fbc5288b619d2885560c70183f35eea6968b2b2")]
 [assembly: System.Reflection.AssemblyProductAttribute("BDF.M365.Diagnostic.UI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BDF.M365.Diagnostic.UI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

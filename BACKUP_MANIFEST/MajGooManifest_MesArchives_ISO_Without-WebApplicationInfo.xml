@@ -4,9 +4,9 @@
            xmlns:bt="http://schemas.microsoft.com/office/officeappbasictypes/1.0"
            xsi:type="MailApp">
   <Id>f3d1556d-caa1-4f74-9930-7c9414e55f38</Id>
-  <Version>1.0.0.9</Version>
-  <ProviderName>PROD_PRESQUE_ArchivesAddin Banque de France</ProviderName>
-  <DefaultLocale>en-US</DefaultLocale>
+  <Version>1.0.1.0</Version>
+  <ProviderName>ArchivesAddin_BDF</ProviderName>
+  <DefaultLocale>fr-FR</DefaultLocale>
   <DisplayName DefaultValue="PROD_PRESQUE_ArchivesAddin"/>
   <Description DefaultValue="Restauration des archives PST via agent local sécurisé SSO"/>
   <IconUrl DefaultValue="https://dellasiegaexternal2.github.io/MesArchivesAddin/assets/icon-64.png"/>
@@ -26,8 +26,8 @@
       </DesktopSettings>
     </Form>
   </FormSettings>
-  <Permissions>ReadWriteItem</Permissions>
-  <Rule xsi:type="RuleCollection" Mode="Or">
+  <Permissions>ReadWriteMailbox</Permissions>
+  <Rule xsi:type="RuleCollection" Mode="Or" RuleCollectionType="Item">
     <Rule xsi:type="ItemIs" ItemType="Message" FormType="Read"/>
   </Rule>
   <DisableEntityHighlighting>false</DisableEntityHighlighting>
