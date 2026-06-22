@@ -111,10 +111,6 @@
         <bt:String id="aboutDesc" DefaultValue="Informations sur l'application"/>
       </bt:LongStrings>
     </Resources>
-    <WebApplicationInfo>
-      <Id>e92a8324-40d8-4ce5-876d-99df6b07acf9</Id>
-      <Resource>api://e92a8324-40d8-4ce5-876d-99df6b07acf9</Resource>
-      <Scopes><Scope>access_as_user</Scope></Scopes>
-    </WebApplicationInfo>
+    
   </VersionOverrides>
 </OfficeApp>
